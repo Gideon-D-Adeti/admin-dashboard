@@ -1,6 +1,9 @@
 :root {
     --blue-color: #3b82f6;
+    --blue-color-dark: #1d4ed8;
     --white-color: #fff;
+    --black-color: #000;
+    --gray-color: #d1d5db;
 }
 
 html {
@@ -22,14 +25,27 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: minmax(7vh, 10vh) auto;
+    grid-template-rows: 1fr 4fr;
+}
+
+main a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
 }
 
 .sidebar-container {
     display: grid;
-    grid-template-rows: minmax(3.5vh, 5vh) auto;
+    grid-template-rows: minmax(5vh, 10vh) auto;
     background-color: var(--blue-color);
     padding: 1rem;
+}
+
+.logo-link {
+    margin-top: -1.5rem;
 }
 
 .logo-icon {
@@ -68,4 +84,60 @@ main {
 
 .icon {
     font-size: 1.25rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.header-container .top,
+.header-container .bottom {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+}
+
+.header-container .left,
+.header-container .right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-input {
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: var(--gray-color);
+    border-radius: 1rem;
+    font-size: inherit;
+    padding: 4px 12px;
+}
+
+.header-container button {
+    border: none;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-size: inherit;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header-container button:hover {
+    background-color: var(--blue-color-dark);
+    transform: scale(1.1);
+}
+
+img {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.header-container .bottom img {
+    width: 75px;
 }
