@@ -1,3 +1,8 @@
+:root {
+    --blue-color: #3b82f6;
+    --white-color: #fff;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -8,7 +13,6 @@ html {
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
 }
 
 body {
@@ -18,5 +22,50 @@ body {
 
 main {
     display: grid;
-    grid-template-rows: minmax(20vh, 30vh) auto;
+    grid-template-rows: minmax(7vh, 10vh) auto;
+}
+
+.sidebar-container {
+    display: grid;
+    grid-template-rows: minmax(3.5vh, 5vh) auto;
+    background-color: var(--blue-color);
+    padding: 1rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.sidebar-container a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.sidebar-container a:hover {
+    text-decoration: underline;
+}
+
+.sidebar-container nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.sidebar-container nav .top {
+    margin-bottom: min(30px, 5vh);
+}
+
+.sidebar-container ul {
+    list-style: none;
+}
+
+.sidebar-container ul a,
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    font-size: 1.25rem;
 }

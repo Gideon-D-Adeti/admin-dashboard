@@ -6,12 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body>
-    <!-- Sidebar -->
+    <!-- Sidebar area -->
     <aside class="sidebar-container">
+        <!-- Logo -->
+        <a class="logo-link" href="">
+            <span class="logo-icon mdi mdi-view-dashboard"></span>
+            <h1>Dashboard</h1>
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="top">
+                <ul>
+                    <li><a href=""><span class="icon mdi mdi-home"></span><span>Home</span></a></li>
+                    <li><a href=""><span
+                                class="icon mdi mdi-card-account-details-outline"></span><span>Profile</span></a>
+                    </li>
+                    <li><a href=""><span class="icon mdi mdi-message-reply"></span><span>Messages</span></a>
+                    </li>
+                    <li><a href=""><span class="icon mdi mdi-clock-time-three"></span><span>History</span></a>
+                    </li>
+                    <li><a href=""><span class="icon mdi mdi-file-multiple"></span><span>Tasks</span></a></li>
+                    <li><a href=""><span class="icon mdi mdi-account-group"></span><span>Communities</span></a></li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li><a href=""><span class="icon mdi mdi-cog"></span><span>Settings</span></a></li>
+                    <li><a href=""><span class="icon mdi mdi-help-box"></span><span>Support</span></a></li>
+                    <li><a href=""><span class="icon mdi mdi-shield-check"></span><span>Privacy</span></a></li>
+                </ul>
+            </div>
+        </nav>
     </aside>
+    <!-- Main area -->
     <main>
         <header class="header-container"></header>
         <section class="main-content-container"></section>
