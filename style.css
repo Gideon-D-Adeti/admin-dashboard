@@ -4,6 +4,7 @@
     --white-color: #fff;
     --black-color: #000;
     --gray-color: #d1d5db;
+    --yellow-color: #eab308;
 }
 
 html {
@@ -140,4 +141,50 @@ img {
 
 .header-container .bottom img {
     width: 75px;
+}
+
+.main-content-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    background-color: var(--gray-color);
+    padding: 2rem 1rem;
+    gap: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.project {
+    background-color: var(--white-color);
+    min-height: 180px;
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border-left: 0.5rem solid var(--yellow-color);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(4px);
+}
+
+.project .links {
+    margin-top: 32px;
+    align-self: flex-end;
+    display: flex;
+    gap: 16px;
+}
+
+.project .links a {
+    transition: transform 0.3s;
+}
+
+.project .links a:hover {
+    transform: scale(1.25);
 }
